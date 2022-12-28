@@ -1,5 +1,8 @@
 package com.devsuperior.bds04.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +15,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_city")
-public class City {
-	
+public class City implements Serializable {
+	private static final long serialVersionUID=1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
